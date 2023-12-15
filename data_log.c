@@ -791,7 +791,7 @@ static bool io_type_is_mergeable(struct f2fs_bio_info *io,
             if ((start_source_blkaddr + offset_destination_blkaddr + 1) != cur_source_blkaddr) {
                 return false;
             }
-           //printk(KERN_INFO "remap merged: start_destination_blkaddr %u, last_destination_in_bio %u, cur_destination_blkaddr %u, offset_destination_blkaddr %u, start_source_blkaddr %u, last_source_in_bio %u, cur_source_blkaddr %u\n",start_destination_blkaddr, io->last_block_in_bio, fio->new_blkaddr, offset_destination_blkaddr, start_source_blkaddr, start_source_blkaddr+offset_destination_blkaddr, cur_source_blkaddr);
+           printk(KERN_INFO "remap merged: start_destination_blkaddr %u, last_destination_in_bio %u, cur_destination_blkaddr %u, offset_destination_blkaddr %u, start_source_blkaddr %u, last_source_in_bio %u, cur_source_blkaddr %u\n",start_destination_blkaddr, io->last_block_in_bio, fio->new_blkaddr, offset_destination_blkaddr, start_source_blkaddr, start_source_blkaddr+offset_destination_blkaddr, cur_source_blkaddr);
         } else {
             return false;
         }
